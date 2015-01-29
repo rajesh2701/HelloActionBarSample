@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 /**
  * Created by Rajesh on 1/28/2015.
@@ -24,6 +26,13 @@ public class MainActivity extends ActionBarActivity
         {
             setSupportActionBar(toolbar);
         }
+
+        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this,"Button clicked",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
